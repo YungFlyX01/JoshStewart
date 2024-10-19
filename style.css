@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+
+:root {
+    --accent-color: #e0e7cb;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.noise::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.01;
+    z-index: 1000;
+    pointer-events: none;
+    background: url(images/noise.gif);
+}
+
+header {
+    position: sticky;
+    /* Makes the header sticky */
+    top: 0;
+    /* Sticks the header to the top */
+    background-color: #111;
+    /* Set background color to match the body */
+    z-index: 1000;
+    /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(94, 94, 94, 0.1);
+    /* Optional: Adds a subtle shadow */
+}
+
+/* You may want to adjust your header links for better visibility */
+.header-container .header-links a {
+    color: white;
+    /* Ensure links are visible */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-container .header-links {
+    transition: color 0.1s ease-in;
+}
+
+.header-container .header-links:hover {
+    color: red;
+}
+
+.header-container li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+
+/* Main Section */
+
+.section-container {
+
+    height: 700px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.section-container .story {
+    display: block;
+    width: 60%;
+    /* Set to 100% to stretch across the container */
+    max-width: none;
+    /* Remove max-width restriction */
+    line-height: 1.6;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-left: 0;
+    /* Align text to the far left */
+}
+
+.lg-text-container {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.lg-text-container h1:nth-child(2) {
+    position: relative;
+    left: 110px;
+}
+
+.lg-text-container p {
+    position: relative;
+    left: 395px;
+    margin-top: 7px;
+}
+
+.sm-text.location {
+    margin-top: 30px;
+}
+
+
+
+
+/* projects  Section*/
+.works-container {
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.project-skills {
+    display: block;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+
+
+.project-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-section .project-box {
+    height: 300px;
+    width: 200px;
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box .text-header {
+    text-align: center;
+}
+
+.project-box img {
+    width: 100%;
+    /* Make the image take the full width of the container */
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the container, similar to background-size: cover */
+    object-position: center;
+    /* Centers the image, similar to background-position: center */
+    filter: grayscale(0.7);
+
+
+}
+
+.project-box {
+    transition: transform 0.3s ease-out;
+}
+
+.project-box.img:hover {
+    transform: scale(1.03);
+
+}
+
+
+/* Contacts Section */
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+
+}
+
+.contacts {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.buttons {
+    margin: 50px 0 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button i {
+    margin-right: 10px;
+}
+
+.contact-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+    color: #222;
+}
+
+
+
+/* Utilty-class */
+
+.sm-text {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.xxl-text {
+    font-weight: 440;
+    color: #e0e7cb;
+    font-size: 9rem;
+    line-height: 0.9em;
+}
+
+.lg-text {
+    font-weight: 440;
+    color: var(--accent-color);
+    font-size: 4rem;
+    font-family: "Tulpen One", sans-serif;
+}
+
+/* Responsiveness */
+
+/* Base styles for the contacts section */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    /* Adjust height as needed */
+    text-align: center;
+    /* Center text for all screen sizes */
+}
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+/* Base styles for the contacts section */
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    /* Adjust height as needed */
+    text-align: center;
+    /* Center text for all screen sizes */
+}
+
+
+
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 576px) {
+    .project-box.text {
+        display: none;
+    }
+
+    .project-box.img {
+        height: 200px;
+        /* Adjust as needed */
+    }
+
+    .xxl-text {
+        font-size: 2.5em;
+        /* Slightly larger for better visibility */
+        position: static;
+    }
+
+    .sm-text.location {
+        position: static;
+        text-align: center;
+    }
+
+    .lg-text-container h1:nth-child(2),
+    .lg-text-container h1 {
+        position: static;
+        text-align: center;
+    }
+
+    .lg-text-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+/* Small Devices (tablets, less than 768px) */
+@media (max-width: 768px) {
+    .section-container .story {
+        position: static;
+        text-align: center;
+        width: 90%;
+        /* Center the text */
+    }
+
+    .xxl-text {
+        font-size: 1em;
+        /* Scale down for smaller devices */
+    }
+
+    .sm-text {
+        font-size: 1.2em;
+        /* Ensure readability */
+    }
+
+    .sm-text.location {
+        position: static;
+        text-align: center;
+    }
+
+    .lg-text-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lg-text-container h1:nth-child(2),
+    .lg-text-container h1 {
+        position: static;
+        text-align: center;
+    }
+
+
+}
+
+/* Medium Devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .section-container .story {
+        position: static;
+        text-align: center;
+        width: 85%;
+        /* Slightly narrower for medium devices */
+    }
+
+    .xxl-text {
+        font-size: 5em;
+        /* Adjust for medium screens */
+    }
+
+    .sm-text.location {
+        position: static;
+        text-align: center;
+    }
+}
+
+/* Large Devices (desktop, less than 1200px) */
+@media (max-width: 1200px) {
+    .section-container {
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+
+    .xxl-text {
+        font-size: 5.5rem;
+        /* Adjust for medium screens */
+    }
+
+    .section-container .story {
+        position: static;
+        text-align: center;
+        width: 85%;
+        /* Slightly narrower for medium devices */
+    }
+
+
+
+
+}
